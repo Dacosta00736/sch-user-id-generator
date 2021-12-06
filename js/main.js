@@ -455,7 +455,7 @@ const handleTeachForm = (event) => {
   let branchCode = frm.elements.branchCode.value;
   let frmData = { teachName, employmentYr, branchCode };
 
-  createTeachAcc(frmData);
+  await createTeachAcc(frmData);
 };
 
 // student's form
