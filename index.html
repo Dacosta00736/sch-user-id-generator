@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate School Students | Teachers ID</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main class="main">
+    <header class="main-header">
+      <h1 class="main-title center-text">auto-generate IDs</h1>
+
+      <nav class="nav">
+        <a href="#" class="nav-tab" onclick="navbar(event)" data-tab-link="student">
+          student
+        </a>
+        <a href="#" class="nav-tab" onclick="navbar(event)" data-tab-link="teacher">
+          teacher
+        </a>
+        <a href="#" class="nav-tab active" onclick="navbar(event)" data-tab-link="registered">
+          registered
+        </a>
+      </nav>
+    </header>
+
+    <!-- for student's id -->
+    <section class="section" data-tab-item="student">
+      <div class="frm-container fade-in">
+        <div class="std-avatar-container">
+          <img src="./img/icons8-brown-long-curly-hair-lady.svg" alt="student avatar" width="100" height="auto">
+        </div>
+        <h3 class="title center-text" style="margin-bottom: 0; margin-top: -0.5em;">student ID</h3>
+        <form action="#" id="studt-frm">
+          <div class="frm-name-container">
+            <!-- first name -->
+            <div class="input-field">
+              <label for="studt-first-name">first name</label>
+              <input type="text" name="firstName" id="studt-first-name" data-studt-first-name="" placeholder="first name" required>
+            </div>
+            <!-- last name -->
+            <div class="input-field">
+              <label for="studt-last-name">last name</label>
+              <input type="text" name="lastName" id="studt-last-name" data-studt-last-name="" placeholder="last name" required>
+            </div>
+          </div>
+          <!-- sch branch code -->
+          <div class="input-field">
+            <label for="branchCode">branch Code</label>
+            <select name="branchCode" id="branchCode" data-branch-code="" required>
+              <option value="">sch branch code</option>
+              <option value="001">001</option>
+              <option value="002">002</option>
+              <option value="003">003</option>
+              <option value="004">004</option>
+              <option value="005">005</option>
+            </select>
+          </div>
+          <!-- student's admission year -->
+          <div class="input-field">
+            <label for="admYr">Admission year</label>
+            <input type="text" name="admYr" id="admYr" data-adm-year="" maxlength="4" placeholder="admission year">
+          </div>
+          <!-- submit form btn -->
+          <div class="input-field">
+            <button type="submit" class="btn btn-block">
+              generate ID
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- for teacher's id -->
+    <section class="section" data-tab-item="teacher">
+      <div class="frm-container fade-in">
+        <div class="std-avatar-container">
+          <img src="./img/icons8-man-in-green-tie.svg" alt="student avatar" width="100" height="auto">
+        </div>
+        <h3 class="title center-text" style="margin-bottom: 0; margin-top: -0.5em;">teacher ID</h3>
+        <form action="#" id="teach-frm">
+          <div class="frm-name-container">
+            <!-- first name -->
+            <div class="input-field">
+              <label for="teachFirstName">first name</label>
+              <input type="text" id="teachFirstName" name="firstName" data-first-name="" placeholder="first name" required>
+            </div>
+            <!-- last name -->
+            <div class="input-field">
+              <label for="teachLastName">last name</label>
+              <input type="text" id="teachLastName" name="lastName" data-last-name="" placeholder="last name" required>
+            </div>
+          </div>
+          <!-- employment year -->
+          <div class="input-field">
+            <label for="employmentYr">employment year</label>
+            <input type="text" id="employmentYr" name="employmentYr" data-employment-yr="" maxlength="4" placeholder="employment year">
+          </div>
+          <!-- sch's branch code -->
+          <div class="input-field">
+            <label for="branchCode">branch code</label>
+            <select name="branchCode" id="branchCode" required>
+              <option value="">sch branch code</option>
+              <option value="001">001</option>
+              <option value="002">002</option>
+              <option value="003">003</option>
+              <option value="004">004</option>
+              <option value="005">005</option>
+            </select>
+          </div>
+          <!-- submit form btn -->
+          <div class="input-field">
+            <button type="submit" class="btn btn-block">
+              generate ID
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- for listing all registered ids -->
+    <section class="section active-tab-item" data-tab-item="registered">
+      <h2>registered IDs</h2>
+      <!-- list registered ids -->
+      <section class="list-item-container">
+        <header class="list-header">
+          <span>name</span>
+          <span>ID</span>
+          <span>type</span>
+          <span>code</span>
+          <span>action</span>
+        </header>
+        <section data-reg-ids="">
+          <div class="list-item">
+            <div class="list-action">
+              <span onclick="deleteListItem(event)" data-delete-item="11" style="transition-delay: 0.7s;">
+                🗑
+              </span>
+              <span onclick="editListItem(event)" data-edit-item="11" style="transition-delay: 0.5s;">
+                🖊
+              </span>
+              <span onclick="printListItem(event)" data-print-item="21002272JD">
+                🖨
+              </span>
+            </div>
+            <div class="list-details">
+              <!-- name -->
+              <div>
+                <div class="sm-header">name</div>
+                <span data-item-name="jack o. daniels">jack o. daniels</span>
+              </div>
+              <!-- id -->
+              <div>
+                <div class="sm-header">ID</div>
+                <span data-item-id="21002272JD">21002272JD</span>
+              </div>
+              <!-- id type -->
+              <div>
+                <div class="sm-header">type</div>
+                <span data-item-type="student">student</span>
+              </div>
+              <!-- slip code -->
+              <div>
+                <div class="sm-header">code</div>
+                <span data-item-code="00211">00211</span>
+              </div>
+              <!-- ellipsis option icon -->
+              <span class="item-action" onclick="showListItemAction(event)">&#8942;</span>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <!-- javaScript files -->
+  <script src="js/main.js"></script>
+</body>
+</html>

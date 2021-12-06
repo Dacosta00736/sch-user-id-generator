@@ -1,0 +1,32 @@
+/* ====== @DESC: FOR STUDENT's ID
+// ******** FACTOR THAT MAKE-UP STUDENT IDs ********
+=> student's year of admission into the sch(i.e 2020 or 20)
+=> the school's branch code(i.e 001)
+=> three/four random unique numbers(i.e 1-999)
+=> first letter of both student's first & last name
+=> output result instance = 2020001431OH or 20001431OH
+====== */
+
+/* ====== @DESC: FOR TEACHER's ID
+// ******** FACTOR THAT MAKE-UP TEACHER IDs ********
+=> teacher's year of employment into the sch(i.e 2020 or 20)
+=> the school's branch code(i.e 001)
+=> three/four random unique numbers(i.e 1-999)
+=> first letter of both teacher's first & last name, and ending with T
+=> output result instance = 2020001431OH or 20001431OH
+====== */
+
+/* ====== @DESC:
+// ******** FOR GENERATING STUDENT'S OR TEACHER'S IDs ********
+1. method to generate random string
+2. method to generate student/teacher id with generated random string
+3. method to check if generated id already exist
+4. method to generated multiple ids not already existed 
+====== */
+
+/* ====== @DESC: MOCK-DATA FOR TEST 
+=> the local 'json-server' database is used of test
+=> which can be start in the same directory as the project with:
+  --> json-server --watch ./data/db.json
+  (type in the command line)
+====== */

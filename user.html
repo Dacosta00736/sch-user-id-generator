@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registered Student's info</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main class="main" style="margin: 0;">
+    <section class="slip-container">
+      <div class="slip">
+        <header class="slip-header">
+          <div class="user-avatar">
+            <img src="./img/profile.svg" alt="user's avatar" width="70" height="auto">
+          </div>
+          <h3 class="slip-title" data-slip-title="">student</h3>
+        </header>
+
+        <section class="slip-body" data-std-info="">
+          <div class="user-info">
+            <span class="info-title">name</span>
+            <span data-std-name="">jack o. daniel</span>
+          </div>
+          <div class="user-info">
+            <span class="info-title">student ID</span>
+            <span data-std-id="">21002272JD</span>
+          </div>
+          <div class="user-info">
+            <span class="info-title">slip code</span>
+            <span data-slip-code="">00211</span>
+          </div>
+        </section>
+
+        <footer class="slip-footer">
+          <div class="slip-code">std-00211</div>
+          <div class="slip-date">11/26/2021</div>
+        </footer>
+      </div>
+
+      <!-- C.T.A buttons container -->
+      <section data-cta-btn-container="">
+        <!-- button to show modal dialog for printing -->
+        <button type="button" class="btn btn-sec" style="margin: 0;" onclick="proceedPrintBtn()" data-proceed-btn="">
+          proceed to print
+        </button>
+        <br><br>
+        <!-- button to return user back to home page after successful printing -->
+        <button type="button" class="btn cta-btn hide" onclick="goBackHome()" data-back-home-btn="">
+          <span>&larr;</span> <span>go back home</span>
+        </button>
+      </section>
+    </section>
+  </main>
+
+  <!-- modal window for printing/saving the generated ID -->
+  <aside class="modal hide-modal">
+    <section class="modal-content">
+      <header class="modal-header">
+        <span class="close-modal" onclick="closeModal()">x</span>
+        <h1 class="print-icon">📃</h1>
+        <h4 class="modal-title">Hurray!</h4>
+      </header>
+
+      <!-- modal message -->
+      <article class="modal-message">
+        you can now print your generated school ID; which is use to gain access 
+        into most things in the school's portal. Please note, this <b>"ID"</b> 
+        is needed for the completion of student registeration and login, on the 
+        school's student portal.
+      </article>
+
+      <!-- modal footer -->
+      <footer class="modal-footer">
+        <button type="button" class="btn btn-block"  onclick="printId()">
+          print ID 🖨
+        </button>
+      </footer>
+    </section>
+  </aside>
+
+
+  <!-- javaScript files -->
+  <script src="./js/user.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "students": [
+    {
+      "id": 2,
+      "studtId": "21002720FJ",
+      "name": {
+        "first": "fury",
+        "last": "nickolas johnson"
+      },
+      "branchCode": "002"
+    },
+    {
+      "studtId": "18003738DD",
+      "name": {
+        "first": "denver",
+        "last": "marie duke"
+      },
+      "branchCode": "003",
+      "id": 3
+    },
+    {
+      "studtId": "21005611FS",
+      "name": {
+        "first": "fynley",
+        "last": "sinclair"
+      },
+      "branchCode": "004",
+      "id": 4
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "teachId": "T21002676JD",
+      "name": {
+        "first": "john",
+        "last": "jackson jones"
+      },
+      "branchCode": "002"
+    },
+    {
+      "teachId": "T21001476ZA",
+      "name": {
+        "first": "zebede",
+        "last": "aurier"
+      },
+      "branchCode": "001",
+      "id": 5
+    }
+  ]
+}
